@@ -27,7 +27,9 @@ echo "Building firmware inside container '$IMAGE' ..."
 #
 #   Form:  docker run --rm -v "$(pwd)":/work "$IMAGE"
 #
-echo "ERROR: docker-build.sh is not implemented yet — add the docker run command." && exit 1
+docker run --rm -v "$(pwd)":/work "$IMAGE"
+
+#echo "ERROR: docker-build.sh is not implemented yet — add the docker run command." && exit 1
 
 echo ""
 echo "Done. Artifacts are on the host in ./output/ — flash with: bash scripts/flash.sh"
