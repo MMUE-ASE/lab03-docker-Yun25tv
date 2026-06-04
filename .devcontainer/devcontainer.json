@@ -17,13 +17,13 @@
   //        Hint: the Dockerfile is one level up, so "../Dockerfile".
   //        ("context": ".." is provided — it makes the project root the build context.)
   "build": {
-    "dockerfile": "", // <-- fill in the path to your Dockerfile
+    "dockerfile": "../Dockerfile", // <-- fill in the path to your Dockerfile
     "context": ".."
   },
 
   // DC2 — Open VS Code in the same working directory the image uses (WORKDIR /work).
   //        This must match the WORKDIR you set in the Dockerfile (D4).
-  "workspaceFolder": "", // <-- e.g. "/work"
+  "workspaceFolder": "/work", // <-- e.g. "/work"
   "workspaceMount": "source=${localWorkspaceFolder},target=/work,type=bind,consistency=cached",
 
   // Provided — recommend the C/C++ and debug extensions inside the container.
